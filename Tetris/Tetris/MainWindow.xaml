@@ -30,17 +30,15 @@
 
         <Grid.Background>
 
-            <ImageBrush ImageSource= "Assets/Background.png" />
+            <SolidColorBrush Color ="Black"/>
 
         </Grid.Background>
 
         <Viewbox Grid.Row = "1"
              Grid.Column = "1"
-             Margin = "0, 0, 0, 30">
+             Margin = "0, 30, 0, 30">
 
             <Canvas x:Name = "GameCanvas"
-                Background = "#101010"
-                Opacity = "0.5"
                 Width = "250"
                 Height = "510"
                 ClipToBounds = "True"
@@ -48,18 +46,18 @@
 
         </Viewbox>
 
-        <TextBlock x:Name = "ScoreText"
-               Grid.Row = "0"
-               Grid.Column = "0"
-               Text = "Score"
-               Margin = "100, 0"
-               TextAlignment = "center"
-               />
-
         <StackPanel Grid.Row = "1"
                 Grid.Column = "0"
                 VerticalAlignment = "Center"
                 HorizontalAlignment = "Center">
+
+        <TextBlock x:Name = "ScoreText"
+               Grid.Row = "0"
+               Grid.Column = "0"
+               Text = "Score"
+               Margin = "0, 50"
+               TextAlignment = "center"
+               />
 
             <TextBlock Text = "Hold"
                    TextAlignment = "Center"/>

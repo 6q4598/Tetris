@@ -19,3 +19,11 @@ C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.
 C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\ref\Tetris.dll
 C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Interop.Microsoft.Vbe.Interop.Forms.dll
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Interop.DXTMSFTLib.dll
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Interop.DXTRANSLib.dll
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.csproj.ResolveComReference.cache
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.csproj.GenerateResource.cache
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.Properties.Resources.resources
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.StartPage.resources
+C:\Users\farrufi\Documents\Tetris\Tetris\Tetris\obj\Debug\net6.0-windows\Tetris.RegistrationPage.resources

@@ -19,12 +19,47 @@ namespace Tetris {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
 
+    /*
+     * <summary>
+     * Interaction logic for MainWindow.xaml.
+     * 
+     * We have built this game using 2 technologies and a layered desing.
+     * In the start, we hide the second layer (tetris game maked with XAML) and only shows
+     * the loggin page. Then, when the user is logged or registered succesfully, we hide the first layer (loggin)
+     * and shows the tetris game.
+     * 
+     * The first is built with "WindowsForms" and manages the login,
+     * registration and scores of the players.
+     * 
+     * The second is the Tetris game and is made with XAMl.
+     */
+
     public partial class MainWindow : Window {
 
-        // Constructor.
+        // Constructor 1: Shows loggin and hides tetris.
         public MainWindow () {
 
+            this.Visibility = Visibility.Hidden;
             InitializeComponent();
+            Hide();
+            StartPage startPage = new StartPage();
+            startPage.ShowDialog();
+            Close();
+            imageControls = SetupGameCanvas(gameState.GameGrid);
+
+        }
+
+        // Constructor 2: Shows tetris and hides loggin.
+        public MainWindow(bool playGame) {
+            
+            Console.WriteLine("Hello World");
+
+            if (playGame == true) {
+                
+                InitializeComponent();
+
+            }
+
             imageControls = SetupGameCanvas(gameState.GameGrid);
 
         }
