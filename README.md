@@ -1,7 +1,7 @@
 # Tetris
 Aquest és un programa tutorial per tal d'aprendre la programació en C#.
 
-El Tetris és un videojoc de tipus trencaclosques. Fou inventat per l'enginyer informàtic rus Aleksei Pàjitnov l'any 1984,[1] mentre treballava a l'Acadèmia de Ciències de Moscou.
+El Tetris és un videojoc de tipus trencaclosques. Fou inventat per l'enginyer informàtic rus Aleksei Pàjitnov l'any 1984, mentre treballava a l'Acadèmia de Ciències de Moscou.
 
 Pàjitnov es va inspirar en un joc molt conegut i tradicional a Rússia anomenat Pentaminó. El joc però, és d'origen àrab. Va programar una nova versió d'aquest joc en un ordinador Electronica 60. Explica la llegenda que Pàjitnov el creà en una sola tarda; és possible que la llegenda no falti a la veritat perquè Tetris es pot programar gairebé en qualsevol tipus de llenguatge de programació en una sola tarda. S'ha de tenir en compte que el realment complex del Tetris va ser dissenyar la seva mecànica de joc i no la programació en si mateixa. Avui en dia és molt senzill copiar les seves regles per jugar-hi.
 
