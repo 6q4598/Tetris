@@ -1,0 +1,1 @@
+insert into Users (users, psw) values ('admin', '1234');

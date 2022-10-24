@@ -1,0 +1,11 @@
+C:\Users\farrufi\Documents\Tetris.exe
+C:\Users\farrufi\Documents\Tetris.dll
+C:\Users\farrufi\Documents\Tetris.deps.json
+C:\Users\farrufi\Documents\Tetris.runtimeconfig.json
+C:\Users\farrufi\Documents\Tetris.pdb
+C:\Users\farrufi\Documents\System.Data.SqlClient.dll
+C:\Users\farrufi\Documents\runtimes\win-arm64\native\sni.dll
+C:\Users\farrufi\Documents\runtimes\win-x64\native\sni.dll
+C:\Users\farrufi\Documents\runtimes\win-x86\native\sni.dll
+C:\Users\farrufi\Documents\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\farrufi\Documents\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
