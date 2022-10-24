@@ -7,6 +7,9 @@ Pàjitnov es va inspirar en un joc molt conegut i tradicional a Rússia anomenat
 
 Unes peces bidimensionals de quatre blocs en diferents disposicions cauen des de la part superior de la pantalla. El jugador no pot impedir aquesta caiguda però pot decidir el lloc on caurà la peça i la seva rotació en 0°, 90°, 180° o 270°. Quan una línia horitzontal es completa, aquesta línia desapareix i totes les peces que estan a sobre descendeixen una posició, alliberant així espai de joc i per tant facilita la tasca de situar noves peces. La caiguda dels blocs s'accelera de forma constant. El joc s'acaba quan s'amunteguen fins a sortir de l'àrea de joc.
 
+
+El joc està basat en el que ha creat OttoBotCode (vegeu el seu repositori més avall), al qual li he afegit algunes funcionalitats programades amb WinsForms i una base de dades per tal de fer-lo paregut a un sistema Arcade. He fet aquest joc per tal d'aprendre C#. És la primera vegada que faig servir tant C# com WinsForms o WPF, així que perdoneu si hi ha alguna incorrecció.
+
 Peces
 -----
 
@@ -40,6 +43,12 @@ Screenshots
 ![tetris2](https://user-images.githubusercontent.com/55920937/197514976-31324e65-7da5-4ed6-a827-0fbc7e7006f8.PNG)
 ![tetris3](https://user-images.githubusercontent.com/55920937/197514987-1426f5b6-359b-447e-bef5-1d6530d8325d.PNG)
 ![tetris4](https://user-images.githubusercontent.com/55920937/197514994-7cea51b4-8aa5-4e9f-a624-d1bc743c2c7b.PNG)
+
+See also
+--------
+- [OttoBotCode Tetris Game](https://github.com/OttoBotCode/Tetris-Game)
+- [System Data SQLclient Official Page](https://learn.microsoft.com/es-es/dotnet/api/system.data.sqlclient?view=dotnet-plat-ext-6.0)
+- [.NET Official Page](https://learn.microsoft.com/es-es/dotnet/?view=dotnet-plat-ext-6.0)
 
 License
 -------
