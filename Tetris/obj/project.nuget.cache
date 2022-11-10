@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8bAq0hNnJt4w8K7Xl7aPVS5Vtut3qZQMgeBm933LkQXHG2/ly9la5eTdXCpSGtM/zZYAfDUMvKUlXUyMpa2dkA==",
+  "dgSpecHash": "mcfwviMMgeGhRKtzUQfvB0yREvIvyEeZs80vZI3Szi6/P8EA5e+57zmdKKCyj2q6IMesxfwVApr17sD1oXk6zw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\farrufi\\Documents\\Tetris\\Tetris\\Tetris.csproj",
+  "projectFilePath": "C:\\Users\\farrufi\\Documents\\TutorialsC#\\Tetris\\Tetris\\Tetris.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\farrufi\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\farrufi\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

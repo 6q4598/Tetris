@@ -476,11 +476,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\farrufi\\Documents\\Tetris\\Tetris\\Tetris.csproj",
+      "projectUniqueName": "C:\\Users\\farrufi\\Documents\\TutorialsC#\\Tetris\\Tetris\\Tetris.csproj",
       "projectName": "Tetris",
-      "projectPath": "C:\\Users\\farrufi\\Documents\\Tetris\\Tetris\\Tetris.csproj",
+      "projectPath": "C:\\Users\\farrufi\\Documents\\TutorialsC#\\Tetris\\Tetris\\Tetris.csproj",
       "packagesPath": "C:\\Users\\farrufi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\farrufi\\Documents\\Tetris\\Tetris\\obj\\",
+      "outputPath": "C:\\Users\\farrufi\\Documents\\TutorialsC#\\Tetris\\Tetris\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
