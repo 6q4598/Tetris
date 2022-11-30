@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>True</UseWindowsForms>
+    <ApplicationIcon>Assets\logoTetris.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -68,6 +69,10 @@
       <VersionMajor>2</VersionMajor>
       <Guid>ac2de821-36a2-11cf-8053-00aa006009fa</Guid>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\logoTetris.ico" />
   </ItemGroup>
 
   <ItemGroup>
