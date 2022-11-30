@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mcfwviMMgeGhRKtzUQfvB0yREvIvyEeZs80vZI3Szi6/P8EA5e+57zmdKKCyj2q6IMesxfwVApr17sD1oXk6zw==",
+  "dgSpecHash": "KqNqD5JO9lUgBAu746RpCh2gjj7sw9UreNIbed8dWcF4FE4olgB7ksRXN+bw7DvzTJfONpmxf6O6lAUA48OYtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\farrufi\\Documents\\TutorialsC#\\Tetris\\Tetris\\Tetris.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "C:\\Users\\farrufi\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\farrufi\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\farrufi\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\farrufi\\.nuget\\packages\\system.data.sqlclient\\4.8.4\\system.data.sqlclient.4.8.4.nupkg.sha512",
+    "C:\\Users\\farrufi\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\farrufi\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\farrufi\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
