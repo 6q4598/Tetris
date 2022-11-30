@@ -3,6 +3,10 @@
 #               IGNORE FILES                       #
 #                                                  #
 ####################################################
+# TODO
+./Tetris/.vs
+./Tetris/bin
+./Tetris/obj
 
 // Docker files.
 Dockerfile
