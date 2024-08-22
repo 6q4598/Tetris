@@ -1,70 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-// DataBase access libraries.
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq.Expressions;
-using System.ComponentModel.Design;
+using System.Windows.Shapes;
 using System.Windows.Interop;
-
-/**************************************************
- * PROVA 1 Visual Studio GITHUB COMPTE PERSONAL   *
- **************************************************/
-
-/**************************************************
- * PROVA 2 Visual Studio GITHUB COMPTE PERSONAL   *
- **************************************************/
-
-/**************************************************
- * PROVA 3 Visual Studio GITHUB COMPTE PERSONAL   *
- **************************************************/
+using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Linq.Expressions;
+using System.Windows.Documents;
+using System.Windows.Navigation;
+using System.Collections.Generic;
+using System.Windows.Media.Imaging;
+using System.ComponentModel.Design;
 
 namespace Tetris {
 
-    /*
-     * <summary>
-     * Interaction logic for MainWindow.xaml.
-     * 
-     * We have built this game using 2 technologies and a layered desing.
-     * In the start, we hide the second layer (tetris game maked with XAML) and only shows
-     * the loggin page. Then, when the user is logged or registered succesfully, we hide the first layer (loggin)
-     * and shows the tetris game.
-     * 
-     * The first is built with "WindowsForms" and manages the login,
-     * registration and scores of the players.
-     * 
-     * The second is the Tetris game and is made with XAMl.
-     */
-
     public partial class MainWindow : Window {
 
-        // Conexion BBDD string.
         static readonly string conexionString = "Server = 42-ARRUFI\\SQLEXPRESS; database = TetrisGame; integrated security = True";
 
         private readonly Image[,] imageControls;
-
-        // Set the acceleration game.
         private readonly int maxDelay = 1000;
         private readonly int minDelay = 75;
         private readonly int delayDecrease = 25;
-
-        // Private Class variables.
         private readonly string PlayingUser;
-        private string ranking; 
 
+        private string ranking; 
         private GameState gameState = new GameState();
 
         // Default constructor: user is 'Default'.
@@ -88,11 +54,7 @@ namespace Tetris {
             PlayingUser = LoggedUser;
             ranking = getScoreRanking();
 
-            if (playGame == true) {
-                
-                InitializeComponent();
-
-            }
+            if (playGame == true) InitializeComponent();
 
             imageControls = SetupGameCanvas(gameState.GameGrid);
 
@@ -104,7 +66,6 @@ namespace Tetris {
             new BitmapImage(new Uri("Assets/TileCyan.png",   UriKind.Relative)),
             new BitmapImage(new Uri("Assets/TileBlue.png",   UriKind.Relative)),
             new BitmapImage(new Uri("Assets/TileOrange.png", UriKind.Relative)),
-
             new BitmapImage(new Uri("Assets/TileGreen.png",  UriKind.Relative)),
             new BitmapImage(new Uri("Assets/TilePurple.png", UriKind.Relative)),
             new BitmapImage(new Uri("Assets/TileRed.png",    UriKind.Relative)),
@@ -114,15 +75,14 @@ namespace Tetris {
 
         private readonly ImageSource[] blockImages = new ImageSource[] {
 
-            new BitmapImage(new Uri("Assets/Block-Empty.png",  UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-I.png",   UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-J.png",   UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-L.png", UriKind.Relative)),
-
-            new BitmapImage(new Uri("Assets/Block-S.png",  UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-T.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-Z.png",    UriKind.Relative)),
-            new BitmapImage(new Uri("Assets/Block-O.png", UriKind.Relative))
+            new BitmapImage(new Uri("Assets/Block-Empty.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-I.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-J.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-L.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-S.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-T.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-Z.png",     UriKind.Relative)),
+            new BitmapImage(new Uri("Assets/Block-O.png",     UriKind.Relative))
 
         };
 
@@ -142,12 +102,9 @@ namespace Tetris {
 
                     };
 
-                    // Push the top rows up so they aren't inside the canvas.
+                    // Push the top rows up so they aren't inside the canvas. The same for the columns.
                     Canvas.SetTop(imageControl, ( k - 2 ) * cellSize + 10);
-
-                    // The same for the columns.
                     Canvas.SetLeft(imageControl, l * cellSize);
-
                     GameCanvas.Children.Add(imageControl);
                     imageControls[k, l] = imageControl;
 
@@ -159,30 +116,21 @@ namespace Tetris {
 
         }
 
-        private static void ReturnTop5(IDataRecord dataRecord) {
-
+        private static void ReturnTop5(IDataRecord dataRecord) =>
             Console.WriteLine(String.Format("{0}, {1}", dataRecord[0], dataRecord[1]));
-
-        }
 
         private string getScoreRanking() {
 
             string result = "";
             SqlConnection conexion = new SqlConnection(conexionString);
-            conexion.Open();
-
             string getScoreRankingCommand = "SELECT TOP 5 userName, score FROM Score ORDER BY score DESC;"; 
+            conexion.Open();
             SqlCommand top5 = new SqlCommand(getScoreRankingCommand, conexion);
 
             try {
 
                 SqlDataReader reader = top5.ExecuteReader();
-
-                while (reader.Read()) {
-
-                    result = result + (( string ) reader["userName"] + reader["score"]) + "\n";
-
-                }
+                while (reader.Read()) result = result + (( string ) reader["userName"] + reader["score"]) + "\n";
 
             }
 
@@ -239,17 +187,8 @@ namespace Tetris {
 
         private void DrawHoldBlock(Block holdBlock) {
 
-            if (holdBlock == null) {
-
-                HoldImage.Source = blockImages[0];
-                
-            }
-
-            else {
-
-                HoldImage.Source = blockImages[holdBlock.Id];
-
-            }
+            if (holdBlock == null) HoldImage.Source = blockImages[0];
+            else                   HoldImage.Source = blockImages[holdBlock.Id];
 
         }
 
@@ -275,11 +214,8 @@ namespace Tetris {
         }
 
         // Write the user points in the BD.
-        private async void GameCanvas_Loaded(object sender, RoutedEventArgs e) {
-
+        private async void GameCanvas_Loaded(object sender, RoutedEventArgs e) =>
             await GameLoop();
-
-        }
 
         private void ScorePoints(string points) {
 
@@ -287,7 +223,6 @@ namespace Tetris {
 
                 SqlConnection conexion = new SqlConnection(conexionString);
                 conexion.Open();
-
                 string insertScoreCommand = "INSERT INTO Score VALUES ('" + PlayingUser + "', " + points + ");";
                 SqlCommand insertScore = new SqlCommand(insertScoreCommand, conexion);
 
@@ -323,11 +258,7 @@ namespace Tetris {
             }
 
             // Score Points firts (only if points > 0).
-            if (gameState.Score > 0) {
-
-                ScorePoints($"{gameState.Score}");
-
-            }
+            if (gameState.Score > 0) ScorePoints($"{gameState.Score}");
 
             // Draw Game Over.
             GameOverMenu.Visibility = Visibility.Visible;
@@ -337,51 +268,39 @@ namespace Tetris {
 
         private void Window_KeyDown(object sender, KeyEventArgs e) {
 
-            if (gameState.GameOver) {
-
-                return;
-
-            }
+            if (gameState.GameOver) return;
 
             switch (e.Key) {
 
                 case Key.Left:
-
                     gameState.MoveBlockLeft();
                     break;
 
                 case Key.Right:
-
                     gameState.MoveBlockRight();
                     break;
 
                 case Key.Down:
-
                     gameState.MoveBlockDown();
                     break;
 
                 case Key.Up:
-
                     gameState.RotateBlockCW();
                     break;
                 
                 case Key.Z:
-
                     gameState.RotateBlockCCW();
                     break;
 
                 case Key.S:
-
                     gameState.HoldBlockFunction();
                     break;
 
                 case Key.Space:
-
                     gameState.DropBlock();
                     break;
 
                 default:
-
                     return;
 
             }
